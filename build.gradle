@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+//apply plugin: 'jacoco'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+}
