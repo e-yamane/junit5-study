@@ -1,10 +1,17 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 //apply plugin: 'jacoco'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+ext.junitPlatformVersion = '1.0.0-M4'
+ext.junitJupiterVersion  = '5.0.0-M4'
 
 buildscript {
   repositories {
     mavenCentral()
+  }
+  dependencies {
+	classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M4'
   }
 }
 
@@ -13,4 +20,6 @@ repositories {
 }
 
 dependencies {
+	testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+	testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
 }
