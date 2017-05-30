@@ -19,6 +19,15 @@ repositories {
     jcenter()
 }
 
+junitPlatform {
+	filters {
+		tags {
+			// include 'fast'
+			include 'taxes'
+		}
+	}
+}
+
 dependencies {
 	testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
 	testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
