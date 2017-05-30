@@ -23,7 +23,7 @@ junitPlatform {
 	filters {
 		tags {
 			// include 'fast'
-			include 'taxes'
+			include '3.8'
 		}
 	}
 }
