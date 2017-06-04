@@ -23,7 +23,7 @@ junitPlatform {
 	filters {
 		tags {
 			// include 'fast'
-			include '3.10'
+			include '3.11'
 		}
 	}
 }
