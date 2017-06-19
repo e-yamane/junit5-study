@@ -24,10 +24,10 @@ junitPlatform {
 		tags {
 			// include 'fast'
 			//include '3.12'
-			include 'zzz'
+			//include 'zzz'
 		}
 	}
-	enableStandardTestTask true
+	//enableStandardTestTask true
 }
 
 dependencies {
