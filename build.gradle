@@ -21,13 +21,23 @@ repositories {
 
 junitPlatform {
 	filters {
-		tags {
-			// include 'fast'
-			//include '3.12'
-			include 'zzz'
-		}
+        //engines {								//実行するエンジンでフィルター
+        //    include 'junit-jupiter'
+        //    // exclude 'junit-vintage'
+        //}
+		//tags {								//タグでフィルター
+		//	// include 'fast'
+		//	//include '3.12'
+		//	include 'zzz'
+		//}
+        //packages {							//パッケージでフィルター
+        //    include 'com.sample.included1', 'com.sample.included2'
+        //    // exclude 'com.sample.excluded1', 'com.sample.excluded2'
+        //}
+        //includeClassNamePattern '.*Spec'		//名前でフィルター
+        //includeClassNamePatterns '.*Test', '.*Tests'
 	}
-	enableStandardTestTask true
+	//enableStandardTestTask false				//従来のtestコマンドを有効にする場合はtrue
 }
 
 dependencies {
