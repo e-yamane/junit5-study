@@ -1,4 +1,4 @@
-package jp.rough_diamond.e_yamane.study.junit5.chap_3_9;
+package jp.rough_diamond.e_yamane.study.junit5.chap_3.sec_3_9;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -8,15 +8,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
-@Tag("3.9")
+@RunWith(JUnitPlatform.class)
 class TestInfoTest {
 
     @BeforeEach
     void init(TestInfo testInfo) {
         String displayName = testInfo.getDisplayName();
-//    	System.out.println(testInfo.getTags());
-//    	System.out.println(displayName);
+    	System.out.println(testInfo.getTags());
+    	System.out.println(displayName);
         assertTrue(displayName.equals("TEST 1") || displayName.equals("test2()"));
     }
 

@@ -1,4 +1,4 @@
-package jp.rough_diamond.e_yamane.study.junit5.chap_3_8;
+package jp.rough_diamond.e_yamane.study.junit5.chap_3.sec_3_8;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -11,11 +11,12 @@ import java.util.Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
 @DisplayName("A stack")
-@Tag("3.8")
+@RunWith(JUnitPlatform.class)
 class TestingAStackTest {
     Stack<Object> stack;
 

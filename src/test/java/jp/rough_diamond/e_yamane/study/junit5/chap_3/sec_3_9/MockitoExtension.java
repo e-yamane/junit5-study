@@ -1,4 +1,4 @@
-package jp.rough_diamond.e_yamane.study.junit5.chap_3_9;
+package jp.rough_diamond.e_yamane.study.junit5.chap_3.sec_3_9;
 
 //see https://github.com/junit-team/junit5-samples/blob/r5.0.0-M4/junit5-mockito-extension/src/main/java/com/example/mockito/MockitoExtension.java
 

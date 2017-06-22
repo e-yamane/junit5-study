@@ -1,4 +1,4 @@
-package jp.rough_diamond.e_yamane.study.junit5.chap_3_9;
+package jp.rough_diamond.e_yamane.study.junit5.chap_3.sec_3_9;
 
 import java.util.HashMap;
 
