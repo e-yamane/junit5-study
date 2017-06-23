@@ -7,10 +7,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 
 @Tag("3.9")
 @ExtendWith(MockitoExtension.class)
+@RunWith(JUnitPlatform.class)
 class MyMockitoTest {
 
     @BeforeEach

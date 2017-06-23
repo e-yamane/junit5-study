@@ -20,7 +20,7 @@ public class AssertAllTest {
 		assertAll("address", 
 				() -> assertEquals("John", "John"), 
 				() -> assertEquals("User", "User"),
-				() -> assertEquals(1 + 1, 2));
+				() -> assertEquals(2, 1 + 1));
 	}
 
 	@Test

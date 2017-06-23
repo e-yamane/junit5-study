@@ -50,7 +50,7 @@ public class AssertTimeoutTest {
 	@Test
 	void 戻り値受け取れるよ() {
 		int ans = assertTimeout(ofMillis(10), () -> add(1, 1));
-		assertEquals(ans, 2);
+		assertEquals(2, ans);
 	}
 
 	@Test

@@ -5,8 +5,11 @@ import java.util.HashMap;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestReporter;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
-@Tag("3.9")
+@Tag("TestReporterTest")
+@RunWith(JUnitPlatform.class)
 class TestReporterTest {
 
     @Test
