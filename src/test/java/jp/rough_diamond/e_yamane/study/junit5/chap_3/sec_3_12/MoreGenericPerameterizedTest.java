@@ -7,12 +7,11 @@ import java.lang.annotation.Target;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.extension.ContainerExtensionContext;
+import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
-import org.junit.jupiter.params.provider.ObjectArrayArguments;
 import org.junit.jupiter.params.support.AnnotationConsumer;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
@@ -36,8 +35,8 @@ public class MoreGenericPerameterizedTest {
 	static class HogeProvider implements ArgumentsProvider,AnnotationConsumer<HogeSource> {
 		private String[] value;
 	    @Override
-	    public Stream<? extends Arguments> arguments(ContainerExtensionContext context) {
-	        return Stream.of(value).map(ObjectArrayArguments::create);
+	    public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
+	        return Stream.of(value).map(Arguments::of);
 	    }
 
 		@Override

@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ObjectArrayArguments;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
@@ -16,7 +15,7 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitPlatform.class)
 public class MethodSourceParameterizedTest {
 	@ParameterizedTest
-	@MethodSource(names={"stringProvider", "stringIterableProvider", "stringIteratorProvider", "stringArrayProvider"})
+	@MethodSource({"stringProvider", "stringIterableProvider", "stringIteratorProvider", "stringArrayProvider"})
 	void testWithSimpleMethodSource(String str) {
 		System.out.println("testWithSimpleMethodSource:" + str);
 	}
@@ -37,14 +36,14 @@ public class MethodSourceParameterizedTest {
 	}
 	
 	@ParameterizedTest
-	@MethodSource(names = "stringAndIntProvider")
+	@MethodSource("stringAndIntProvider")
 	void testWithMultiArgMethodSource(String first, int second) {
 		System.out.printf("testWithMultiArgMethodSource_first:[%s], second:[%d]\n", first, second);
 	}
 
 	static Stream<Arguments> stringAndIntProvider() {
 	    return Stream.of(
-    			ObjectArrayArguments.create("foo", 1), 
-    			ObjectArrayArguments.create("bar", 2));
+    			Arguments.of("foo", 1), 
+    			Arguments.of("bar", 2));
 	}
 }

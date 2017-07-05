@@ -6,44 +6,42 @@ import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
-import org.junit.jupiter.api.extension.ContainerExtensionContext;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ExtensionContext.Namespace;
 import org.junit.jupiter.api.extension.ExtensionContext.Store;
-import org.junit.jupiter.api.extension.TestExtensionContext;
 
 public class StoreExtension implements BeforeAllCallback, BeforeEachCallback, BeforeTestExecutionCallback,
 		AfterTestExecutionCallback, AfterEachCallback, AfterAllCallback {
 	@Override
-	public void beforeAll(ContainerExtensionContext context) throws Exception {
+	public void beforeAll(ExtensionContext context) throws Exception {
 		System.out.println("beforeAll");
 		debugStore(context);
 	}
 	
 	@Override
-	public void beforeEach(TestExtensionContext context) throws Exception {
+	public void beforeEach(ExtensionContext context) throws Exception {
 		System.out.println("beforeEach");
 		debugStore(context);
 	}
 
 	@Override
-	public void beforeTestExecution(TestExtensionContext context) throws Exception {
+	public void beforeTestExecution(ExtensionContext context) throws Exception {
 		System.out.println("beforeTestExecution");
 		debugStore(context);
 	}
 	
 	@Override
-	public void afterTestExecution(TestExtensionContext context) throws Exception {
+	public void afterTestExecution(ExtensionContext context) throws Exception {
 		System.out.println("afterTestExecution");
 		debugStore(context);
 	}
 	@Override
-	public void afterEach(TestExtensionContext context) throws Exception {
+	public void afterEach(ExtensionContext context) throws Exception {
 		System.out.println("afterEach");
 		debugStore(context);
 	}
 	@Override
-	public void afterAll(ContainerExtensionContext context) throws Exception {
+	public void afterAll(ExtensionContext context) throws Exception {
 		System.out.println("afterAll");
 		debugStore(context);
 	}
