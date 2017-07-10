@@ -2,7 +2,6 @@ package jp.rough_diamond.e_yamane.study.junit5.chap_3;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.time.Duration;
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
