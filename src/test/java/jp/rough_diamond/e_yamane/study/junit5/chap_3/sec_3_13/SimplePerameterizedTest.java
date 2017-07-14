@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.EnumSource.Mode;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
@@ -19,7 +20,7 @@ public class SimplePerameterizedTest {
 	}
 
 	@ParameterizedTest
-	@EnumSource(value=TimeUnit.class,names={"HOURS"})
+	@EnumSource(value=TimeUnit.class,names={".*SECONDS", ".I.*"}, mode=Mode.MATCH_ANY)
 	void testEnum(TimeUnit unit) {
 		System.out.println(unit);
 	}
